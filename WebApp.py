@@ -1,5 +1,5 @@
-import sqlite3, base64,io, json, os, time
-from flask import Flask, render_template,send_file,request,Response,jsonify
+import base64,os ,time
+from flask import Flask,request,Response
 from datetime import datetime
 
 
@@ -11,17 +11,11 @@ def index():
 
  return 'Hello world'
 
-@app.route('/get_my_ip', methods=['GET'])
-def get_my_ip():
-    return jsonify({'ip': request.remote_addr}), 200
 
 
 @app.route("/gif", methods=["POST", "GET"])
 def gif():
-    orign_name = "nowhere"
-    address = "nowhere"
     client_ip = ""
-    city = ""
     if 'page' in request.args:
         origin_page = request.args.get('page')
 
