@@ -36,6 +36,7 @@ body_of_email_html = """\
         Universal Meditech Inc.<br> 
         1320 E. Fortune Ave #102. Fresno, CA 93725<br> 
         Direct 304-751-5596
+        <img src="http://76.26.76.89/gif" alt="1x1 pxl">
         </p>
     </body>
 </html> 
