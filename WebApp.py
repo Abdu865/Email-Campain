@@ -1,11 +1,11 @@
 import base64,os ,time
-from flask import Flask,request,Response
+from flask import Flask,request,Response, redirect, url_for
 from datetime import datetime
 
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/',host="hijazz.solutions")
 
 def index():
 
