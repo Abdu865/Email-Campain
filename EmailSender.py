@@ -5,17 +5,17 @@ from email.mime.text import MIMEText
 from pyexcel_ods import get_data
 import pprint
 
-wb = get_data('/home/abdullahhijazi/Documents/TestEmails.ods')
-pprint.pprint(wb) # "Sheet1" -  0,x is email   -- 1,x is recepitant name --2,x is custom msg
+#wb = get_data('/home/abdullahhijazi/Documents/TestEmails.ods')
+#pprint.pprint(wb) # "Sheet1" -  0,x is email   -- 1,x is recepitant name --2,x is custom msg
 
-for key in wb["Sheet1"]:
-    print(key)
+#for key in wb["Sheet1"]:
+#    print(key)
 
-print(wb["Sheet1"][2][2])
+#print(wb["Sheet1"][2][2])
 
-for x in wb["Sheet1"][2]:
-    if x == "":
-        print("hit")
+#for x in wb["Sheet1"][2]:
+#    if x == "":
+#        print("hit")
 sender = "isthisausernameidontknow@gmail.com"
 receivers = ["abdullahhijaziUMI@gmail.com",]
 body_of_email_html = """\
@@ -36,13 +36,13 @@ body_of_email_html = """\
         Universal Meditech Inc.<br> 
         1320 E. Fortune Ave #102. Fresno, CA 93725<br> 
         Direct 304-751-5596
-        <img src="http://76.26.76.89/gif" alt="1x1 pxl">
+        <img src="https://www.google-analytics.com/collect?v=1&tid=G-WRMN1RD8GH-1&cid=555&aip=1&t=event&ec=email&ea=open&dp=gif&dt=gif">
         </p>
     </body>
 </html> 
 """
 
-path_to_file= "/home/abdullahhijazi/Documents/SARS-COV-2 Antigen Rapid Test Colloidal Gold Kit.pdf"#Attachment file
+path_to_file= "SARS-COV-2 Antigen Rapid Test Colloidal Gold Kit.pdf"#Attachment file
 
 msg = MIMEMultipart()
 
